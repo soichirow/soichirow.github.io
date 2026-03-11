@@ -64,6 +64,67 @@ body {
 }
 .links a:hover { background: #f8fafc; border-color: #cbd5e1; transform: translateY(-1px); }
 
+.about {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 40px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+.about h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.about h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+}
+.about p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #334155;
+}
+.about ul, .about ol {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #334155;
+  padding-left: 1.4em;
+}
+.about li {
+  margin-bottom: 4px;
+}
+.about a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+.hashtag-link {
+  margin: 16px 0;
+  text-align: center;
+}
+.hashtag-link a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0f1419;
+  color: #fff;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.hashtag-link a:hover {
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
 .footer {
   margin-top: 40px;
   font-size: 0.6rem;
@@ -76,7 +137,7 @@ body {
 
 <div class="profile">
   <h1>そういちろう</h1>
-  <p>MTG / EDH</p>
+  <p>カードゲーム好きのWebツール制作者</p>
 </div>
 
 <div class="socials">
@@ -86,12 +147,53 @@ body {
 
 <div class="links">
   <a href="https://soichirow.github.io/my-9-cards-mtg/">私を作ったマジック9枚</a>
+  <a href="https://my-9-cards-vg.vercel.app/" target="_blank" rel="noopener">私を構成するヴァンガード9枚</a>
   <a href="https://note.com/black777cat" target="_blank" rel="noopener">note</a>
   <a href="https://script.google.com/macros/s/AKfycbyzDxiyZ-O987clfo7qRDG-I4-x1b4MiOTFCQrvvbTUiUxPPww0kgbHaYAKrTQouCnp/exec" target="_blank" rel="noopener">EDHオタクカード画像一覧</a>
   <a href="https://ko-fi.com/P5P11VGFXY" target="_blank" rel="noopener">Ko-fiで応援する</a>
   <a href="https://amzn.to/4unkFRa" target="_blank" rel="noopener">Amazonでのお買い物で応援する</a>
   <a href="https://www.amazon.jp/hz/wishlist/ls/1Z0X9ZM1D65A7?ref_=wl_share" target="_blank" rel="noopener">ほしいものリスト</a>
 </div>
+
+<!-- メインコンテンツ：私を作ったマジック9枚 について -->
+<section class="about">
+  <h2>「私を作ったマジック9枚」とは？</h2>
+  <p>
+    マジック：ザ・ギャザリング（MTG）の膨大なカードの中から、自分を象徴する9枚を選んで3×3のグリッドに並べ、SNSで共有できる無料のWebツールです。
+    初めて手にしたレアカード、思い出の対戦で活躍した1枚、お気に入りのイラスト——あなたの"MTG人生"を9枚で語ってみませんか？
+  </p>
+
+  <h3>主な機能</h3>
+  <ul>
+    <li><strong>カード検索</strong> — Scryfall APIを利用し、日本語・英語でカードを検索。名前の一部でもヒットします。</li>
+    <li><strong>バージョン切替</strong> — 同じカードの別イラスト・別セット版にワンタップで変更できます。</li>
+    <li><strong>ドラッグ＆ドロップ</strong> — 選んだカードの並び順を直感的に入れ替え。</li>
+    <li><strong>画像保存</strong> — 3×3のカード一覧画像を生成してダウンロード。スマホならカメラロールに直接保存も可能です。</li>
+    <li><strong>リンク共有</strong> — 選んだ9枚の情報をURLに保存。リンクを送るだけで友達にも見てもらえます。</li>
+    <li><strong>SNS共有</strong> — X（Twitter）、Bluesky、Redditへワンタップで投稿できます。</li>
+    <li><strong>自動セーブ</strong> — 作業中のカード選択はブラウザに自動保存。途中でページを閉じても続きから再開できます。</li>
+  </ul>
+
+  <h3>つかいかた</h3>
+  <ol>
+    <li>空きスロットをタップして検索モーダルを開きます。</li>
+    <li>カード名を入力して検索。日本語でも英語でもOK。</li>
+    <li>検索結果から好きなカードを選んでスロットに配置。</li>
+    <li>9枚すべて選んだら「画像で保存」や「Xで共有」で発信！</li>
+  </ol>
+
+  <div class="hashtag-link">
+    <a href="https://x.com/search?q=%23%E7%A7%81%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F%E3%83%9E%E3%82%B8%E3%83%83%E3%82%AF9%E6%9E%9A" target="_blank" rel="noopener">
+      #私を作ったマジック9枚 をXで見る
+    </a>
+  </div>
+
+  <h3>ヴァンガード版もあります</h3>
+  <p>
+    MTG版で好評をいただき、カードファイト!!ヴァンガード版「<a href="https://my-9-cards-vg.vercel.app/" target="_blank" rel="noopener">私を構成するヴァンガード9枚</a>」も公開しました。
+    お気に入りのユニットを9枚選んで、あなたのファイター人生を共有しましょう！
+  </p>
+</section>
 
 <div class="footer">
   <p>Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。</p>
